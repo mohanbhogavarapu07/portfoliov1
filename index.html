@@ -14,171 +14,22 @@
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Mohan Bhogavarapu</title>
     <style>
-     
-section{
-    padding: 160px 15% 120px;
-}
-
-
-.box{
-    background: var(--bg-color);
-    padding: 35px 45px;
-    border-radius: 8px;
-    transition: all .45s ease;
-}
-.box h3{
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--text-color);
-    margin-bottom: 15px;
-}
-.box p{
-    color: var(--second-color);
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 25px;
-}
-.box:hover{
-    transform: translateY(-8px);
-    cursor: pointer;
-}
-.portfolio-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-    align-items: center;
-    gap: 2.5rem;
-    margin-top: 5rem;
-
-}
-.row{
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-
-}
-.row img{
-    width: 100%;
-    border-radius: 8px;
-    display: block;
-    transition: transform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.1),#00a6ff);
-    position: absolute;
-    border-radius: 8px;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 40px;
-    transition: height 0.5s;
-}
-.layer h5{
-    font: 20px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: rgb(255, 255, 255);
-}
-.layer p{
-    color: black;
-    font-size: 1rem;
-    line-height: 1.8;
-}
-.layer i{
-    color: var(--main-color);
-    margin-top: 20px;
-    font-size: 20px;
-    background: var(--text-color);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-}
-.row:hover img{
-    transform: scale(1.1);
-}
-.row:hover .layer{
-    height: 100%;
-}
-.button{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-}
-.contact-text h2{
-    font-size: var(--h2-font);
-    line-height: 1;
-}
-.list{
-    margin-bottom: 2.8rem;
-}
-.list li{
-    margin-bottom: 12px;
-}
-.list li a{
-    display: block;
-    color: var(--second-color);
-    font-size: 14px;
-    transition: all .45s ease;
-}
-.list li a:hover{
-    color: var(--text-color);
-    transform: translateY(5px);
-}
-.button{
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-}
-.btn{
-    display: inline-block;
-    padding: 12px;
-    background: var(--main-color);
-    border-radius: 5px;
-    color: var(--text-color);
-    font-size: 1rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-    transition: all .45s ease;
-}
-.btn:hover{
-    transform: scale(0.9);
-}
-.layer a {
-    color: #000000;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-}
-.main-text{
-    text-align: center;
-}
-.main-text p{
-    color: var(--second-color);
-    font-size: 15px;
-    margin-bottom: 15px;
-}
-.main-text h2{
-    font-size: var(--h2-font);
-    line-height: 1;
-}
-.hi {
-  font-size: 50px;
-}
-
-
-  
+      /* Custom styles for specific elements */
+      .hi {
+        font-size: 50px;
+      }
+      
+      @media (max-width: 768px) {
+        .hi {
+          font-size: 35px;
+        }
+      }
+      
+      @media (max-width: 450px) {
+        .hi {
+          font-size: 28px;
+        }
+      }
     </style>
 </head>
 <body oncontextmenu="return false">
@@ -190,7 +41,7 @@ section{
 
 <!-- navbar starts -->
 <header>
-        <h1><i>Mohan Bhogavarapu</i></h1>
+        <h1><a href="#home"><i>Mohan Bhogavarapu</i></a></h1>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -266,7 +117,7 @@ section{
         </div>
         
         <div class="resumebtn">
-            <a href="https://drive.google.com/file/d/1_jFZ0YphjkmzS_84tyQqP4XnzpWhaTpO/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
+            <a href="https://drive.google.com/file/d/1CGSDuQGU7piVgJyCqfjA8J4eHxb4b2__/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
                 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
@@ -292,12 +143,7 @@ section{
                <span>Java</span>
               </div>
             </div>
-            <div class="bar">
-                <div class="info">
-                 <img src="https://img.icons8.com/color/48/000000/python--v1.png"/>
-                 <span>Python</span>
-                </div>
-            </div>
+ 
             <div class="bar">
                 <div class="info">
                  <img src="https://img.icons8.com/color/48/000000/html-5--v1.png"/>
@@ -337,6 +183,12 @@ section{
             </div>
             <div class="bar">
                 <div class="info">
+                 <img src="https://img.icons8.com/color/48/000000/express-js.png"/>
+                 <span>Express js</span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="info">
                  <img src="https://img.icons8.com/color/48/000000/mongodb.png"/>
                  <span>MongoDB</span>
                 </div>
@@ -351,12 +203,6 @@ section{
                 <div class="info">
                  <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png"/>
                  <span>GitHub</span>
-                </div>
-            </div>
-            <div class="bar">
-                <div class="info">
-                 <img src="https://w1.pngwing.com/pngs/984/270/png-transparent-fish-docker-software-deployment-bluemix-docker-inc-microservices-github-computer-software-thumbnail.png"/>
-                 <span>Docker</span>
                 </div>
             </div>
 
@@ -409,15 +255,11 @@ section{
   </div>
   <div class="portfolio-content">
       <div class="row">
-          <img src="https://img.freepik.com/free-vector/sport-athlete-winner-illustration_1284-52001.jpg?t=st=1740630370~exp=1740633970~hmac=80691401a646fd284f5389a30d724ece1b4855ba7fce8304c2a38c80ef50af5c&w=900">
+          <img src="https://www.talentcards.com/blog/wp-content/uploads/training_needs_assessment-1250x834.jpg">
           <div class="layer">
-              <h5>Decathlon Scoring App</h5>
-              <p>Developed a dynamic web application,the Decathlon Score Calculator,utilizing
-                React for the frontend and Node.js for the backend,enabling real-time com
-               putation of athlete scores across ten events. Implemented responsive design
-                principles to ensure seamless user experience across devices and integrated
-                error handling mechanisms to provide meaningful feedback for invalid inputs.</p>
-              <a href="https://mohanbhogavarapu07.github.io/Decathlon-app/">Click</a>
+              <h5>FactorBeam</h5>
+              <p>Developed a dynamic assessment-based web application — FactorBeam.com.The platform enables users to explore, and attempt domain-specific functional assessments such as full-stack and competitive coding tests..</p>
+              <a href="https://factorbeam.com/">Click</a>
           </div>
       </div>
 
@@ -426,7 +268,7 @@ section{
           <div class="layer">
               <h5>Exercise Video Analyzer</h5>
               <p>An exercise analyzer web application built using Django (Python) for the backend and React for the frontend, enabling structured data processing and real-time feedback on exercise form and performance through video analysis.</p>
-              <a href="#" target="_blank">Demo</a>
+              
           </div>
       </div>
 
@@ -458,32 +300,14 @@ section{
       <div class="image-box">
         <img draggable="false" src="https://cdni.iconscout.com/illustration/premium/thumb/female-coder-is-checking-web-settings-10168056-8227177.png?f=webp" alt="">
       </div>
-    <form id="contact-form">
-      
-      <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
+      <div class="contact-message">
+        <p class="contact-text">Drop a mail to</p>
+        <a href="https://mail.google.com/mail/?view=cm&to=mohanbhogavarapu@gmail.com" target="_blank" class="contact-email">
+          <i class="fas fa-envelope"></i>
+          mohanbhogavarapu@gmail.com
+        </a>
       </div>
-    </form>
-  </div>
+    </div>
   </div>
 </section>
 <!-- contact section ends -->
@@ -496,7 +320,7 @@ section{
 
       <div class="box">
           <h3>Mohan's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Regards Mohan Bhogavarapu</p>
       </div>
 
       <div class="box">
@@ -512,13 +336,13 @@ section{
       <div class="box">
           <h3>contact info</h3>
           <p> <i class="fas fa-phone"></i>+91 9502812714</p>
-          <p> <i class="fas fa-envelope"></i>narayana.bhogavarapu@sasi.ac.in</p>
+          <p> <i class="fas fa-envelope"></i>mohanbhogavarapu@gmail.com</p>
           <p> <i class="fas fa-map-marked-alt"></i>AP,India--534301</p>
           <div class="share">
 
               <a href="https://www.linkedin.com/in/mohan-bhogavarapu" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
               <a href="https://github.com/mohanbhogavarapu07" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-              <a href="narayana.bhogavarapu@sasi.ac.in" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="mohanbhogavarapu@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
               
           </div>
       </div>
@@ -551,11 +375,6 @@ section{
 
 <!-- scroll reveal anim -->
 <script src="https://unpkg.com/scrollreveal"></script>
-
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
 
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 

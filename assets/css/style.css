@@ -99,6 +99,15 @@ header .logo i {
 header .logo:hover {
   color: #fc8c05;
 }
+header h1 a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+}
+header h1 a:hover {
+  opacity: 0.8;
+}
 header .navbar ul {
   list-style: none;
   display: flex;
@@ -508,9 +517,14 @@ header .navbar ul li a:hover {
 .skills {
   min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
+  padding: 8rem 9% 4rem;
+  position: relative;
 }
 .skills h2 {
   color: #fff;
+}
+.skills .heading {
+  margin-bottom: 4rem;
 }
 .skills .heading span {
   color: rgb(255, 230, 0);
@@ -518,61 +532,149 @@ header .navbar ul li a:hover {
 .skills .container {
   background: rgba(0, 0, 22, 0.4);
   color: #fff;
-  border-radius: 1rem;
-  padding: 2rem;
-  width: 90%;
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  width: 95%;
+  max-width: 1400px;
   margin: auto;
   margin-top: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 .skills .container .row {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  flex-wrap: wrap;
-  gap: 1.8rem;
+  gap: 2rem;
+  width: 100%;
 }
 .skills .container .bar {
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  background: rgba(0, 0, 22, 0.9);
-  transition: 0.2s;
+  margin-bottom: 0;
+  padding: 2rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 22, 0.95);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .skills .container .bar:hover {
-  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
-  background-color: rgba(0, 0, 0, 0.9) !important;
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 2, 68, 0.6);
+  background-color: rgba(0, 0, 0, 0.95);
+  border-color: rgba(255, 230, 0, 0.3);
 }
 .skills .container .bar .info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+.skills .container .bar .info img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+.skills .container .bar:hover .info img {
+  transform: scale(1.15) rotate(5deg);
 }
 .skills .container .bar .info i {
-  font-size: 4rem;
+  font-size: 4.5rem;
+  transition: transform 0.3s ease;
+}
+.skills .container .bar:hover .info i {
+  transform: scale(1.15);
 }
 .skills .container .bar .info span {
-  font-size: 2rem;
-  font-weight: 500;
-  font-family: "Poppins";
-  margin-left: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+.skills .container .bar:hover .info span {
+  color: rgb(255, 230, 0);
 }
 /* skills media queries starts*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
+  .skills .container .row {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .skills .container .row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
   .skills .container {
-    padding: 0;
-    margin: 0;
+    width: 98%;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skills {
+    padding: 6rem 5% 3rem;
+  }
+  .skills .container {
+    padding: 2rem 1rem;
+    margin: 1rem auto 0;
+    width: 100%;
+    border-radius: 1rem;
   }
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
-    margin: 1rem;
-    padding: 2rem 0.2rem 2rem 0.2rem;
+    gap: 1.2rem;
+    padding: 0;
+  }
+  .skills .container .bar {
+    padding: 1.5rem 1rem;
+    min-height: 140px;
+    border-radius: 1rem;
+  }
+  .skills .container .bar .info {
     gap: 1rem;
   }
+  .skills .container .bar .info img {
+    width: 48px;
+    height: 48px;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .skills {
+    padding: 5rem 3% 2rem;
+  }
   .skills .container {
-    margin-top: 5px;
-    width: 100%;
+    padding: 1.5rem 0.8rem;
+  }
+  .skills .container .row {
+    gap: 1rem;
+  }
+  .skills .container .bar {
+    padding: 1.2rem 0.8rem;
+    min-height: 120px;
+  }
+  .skills .container .bar .info img {
+    width: 42px;
+    height: 42px;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.2rem;
   }
 }
 /* skills media queries ends*/
@@ -805,6 +907,313 @@ header .navbar ul li a:hover {
 }
 /* work section ends */
 
+/* portfolio section starts - Enhanced Design */
+.portfolio {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 8rem 9% 4rem;
+}
+
+.portfolio .heading {
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+.portfolio .heading span {
+  color: #ffd700;
+}
+
+.portfolio .main-text {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.portfolio .main-text h2 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+  padding: 2rem 0;
+}
+
+.portfolio-content .row {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #fff;
+  height: 350px;
+}
+
+.portfolio-content .row:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-content .row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  border-radius: 15px;
+}
+
+.portfolio-content .row:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-content .row .layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, transparent 100%);
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-content .row:hover .layer {
+  height: 100%;
+}
+
+.portfolio-content .row .layer h5 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.1s;
+}
+
+.portfolio-content .row:hover .layer h5 {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio-content .row .layer p {
+  color: #e0e0e0;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.2s;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.portfolio-content .row:hover .layer p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio-content .row .layer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease 0.3s;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  border: 2px solid transparent;
+}
+
+.portfolio-content .row:hover .layer a {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.portfolio-content .row .layer a:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* GitHub link styling */
+.portfolio .heading:last-of-type {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.portfolio .heading:last-of-type center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.portfolio .heading:last-of-type center .hi {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.portfolio .heading:last-of-type center li {
+  list-style: none;
+  display: inline-block;
+}
+
+.portfolio .heading:last-of-type center .github {
+  font-size: 5.5rem;
+  color: #ffd700;
+  transition: all 0.3s ease;
+  vertical-align: middle;
+  display: inline-block;
+  line-height: 1;
+}
+
+.portfolio .heading:last-of-type center .github:hover {
+  color: #fff;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Portfolio responsive design */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 6rem 5% 3rem;
+  }
+  
+  .portfolio .main-text h2 {
+    font-size: 2.5rem;
+  }
+  
+  .portfolio-content {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .portfolio-content .row {
+    height: 300px;
+  }
+  
+  .portfolio-content .row .layer {
+    padding: 1.5rem;
+  }
+  
+  .portfolio-content .row .layer h5 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-content .row .layer p {
+    font-size: 1.2rem;
+    max-height: 120px;
+  }
+  
+  .portfolio-content .row .layer a {
+    font-size: 1.4rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    padding: 5rem 3% 2rem;
+  }
+  
+  .portfolio .main-text h2 {
+    font-size: 2rem;
+  }
+  
+  .portfolio-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .portfolio-content .row {
+    height: 280px;
+  }
+  
+  .portfolio-content .row .layer {
+    padding: 1.2rem;
+  }
+  
+  .portfolio-content .row .layer h5 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .portfolio-content .row .layer p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    max-height: 100px;
+  }
+  
+  .portfolio-content .row .layer a {
+    font-size: 1.3rem;
+    padding: 0.7rem 1.8rem;
+  }
+  
+  .portfolio .heading:last-of-type center .hi {
+    font-size: 2rem;
+  }
+  
+  .portfolio .heading:last-of-type center .github {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .portfolio {
+    padding: 4rem 2% 2rem;
+  }
+  
+  .portfolio .main-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-content .row {
+    height: 250px;
+  }
+  
+  .portfolio-content .row .layer h5 {
+    font-size: 1.4rem;
+  }
+  
+  .portfolio-content .row .layer p {
+    font-size: 1rem;
+  }
+  
+  .portfolio-content .row .layer a {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.5rem;
+  }
+  
+  .portfolio .heading:last-of-type center .hi {
+    font-size: 1.6rem;
+  }
+  
+  .portfolio .heading:last-of-type center .github {
+    font-size: 2.5rem;
+  }
+}
+/* portfolio section ends */
+
 /* experience section starts */
 .experience .timeline {
   position: relative;
@@ -1004,112 +1413,45 @@ header .navbar ul li a:hover {
   height: 40rem;
   position: relative;
 }
-.contact .content form {
+.contact .content .contact-message {
   width: 45%;
   margin-right: 3.5rem;
-}
-form .form-group {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
 }
-.form-group .field {
-  height: 50px;
-  display: flex;
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form i {
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  color: rgb(51, 51, 51);
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-form .field input,
-form .message textarea {
-  width: 100%;
-  height: 100%;
-  outline: none;
-  padding: 0 16px 0 48px;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
-}
-.field input::placeholder,
-.message textarea::placeholder {
-  color: rgb(51, 51, 51);
-}
-.field input:focus,
-.message textarea:focus {
-  padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
-}
-.field input:focus ~ i,
-.message textarea:focus ~ i {
-  color: rgb(115, 3, 167);
-}
-form .message {
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form .message i {
-  top: 25px;
-  font-size: 20px;
-  left: 15px;
-}
-form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 12px 20px 0 48px;
-}
-form .message textarea::-webkit-scrollbar {
-  width: 0px;
-}
-form .button-area {
-  display: flex;
-  float: right;
-  flex-direction: row-reverse;
-}
-.button-area button {
-  color: #fff;
-  border: none;
-  outline: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  transition: 0.3s ease;
+
+.contact .content .contact-message .contact-text {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 2rem;
   font-family: "Nunito", sans-serif;
 }
-.button-area button:hover {
-  background: #421cecf5;
+
+.contact .content .contact-message .contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 2.2rem;
+  color: #2506ad;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, #e5ecfb 0%, #f0f4ff 100%);
+  border-radius: 50px;
+  border: 2px solid #2506ad;
+  font-family: "Poppins", sans-serif;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
 }
-.button-area span {
-  font-size: 17px;
-  padding: 1rem;
-  display: none;
-}
-.button-area button i {
-  position: relative;
-  top: 6px;
-  left: 2px;
-  font-size: 1.5rem;
-  transition: 0.3s;
-  color: #fff;
-}
-.button-area button:hover i {
-  left: 8px;
+
+.contact .content .contact-message .contact-email i {
+  font-size: 2.5rem;
 }
 /* contact section media queries starts */
 @media (max-width: 900px) {
@@ -1125,7 +1467,7 @@ form .button-area {
   .contact .content .image-box {
     display: none;
   }
-  .contact .content form {
+  .contact .content .contact-message {
     width: 100%;
     margin-right: 2rem;
   }
@@ -1325,18 +1667,26 @@ form .button-area {
   }
   .skills .container {
     width: 100%;
-    padding: 0.5rem;
-    margin: 0;
+    padding: 2rem 1rem;
+    margin: 1rem auto 0;
   }
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
+    gap: 1.2rem;
     margin: 0;
     padding: 0;
   }
   .skills .container .bar {
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding: 1.5rem 1rem;
+    margin-bottom: 0;
+    min-height: 140px;
+  }
+  .skills .container .bar .info img {
+    width: 48px;
+    height: 48px;
+  }
+  .skills .container .bar .info span {
+    font-size: 1.4rem;
   }
   .education .box-container {
     width: 100%;
@@ -1373,6 +1723,28 @@ form .button-area {
     width: 100%;
     padding: 1rem 0.5rem;
   }
+  .portfolio-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem 0;
+  }
+  .portfolio-content .row {
+    height: 250px;
+  }
+  .portfolio-content .row .layer {
+    padding: 1rem;
+  }
+  .portfolio-content .row .layer h5 {
+    font-size: 1.4rem;
+  }
+  .portfolio-content .row .layer p {
+    font-size: 1rem;
+    max-height: 80px;
+  }
+  .portfolio-content .row .layer a {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.5rem;
+  }
   .contact .container {
     margin: 1rem 0.2rem;
     padding: 0.5rem;
@@ -1392,9 +1764,22 @@ form .button-area {
     width: 100%;
     height: auto;
   }
-  .contact .content form {
+  .contact .content .contact-message {
     width: 100%;
     margin-right: 0;
+  }
+  
+  .contact .content .contact-message .contact-text {
+    font-size: 2rem;
+  }
+  
+  .contact .content .contact-message .contact-email {
+    font-size: 1.8rem;
+    padding: 1.2rem 2.5rem;
+  }
+  
+  .contact .content .contact-message .contact-email i {
+    font-size: 2rem;
   }
   .footer .box-container {
     flex-direction: column;
@@ -1421,6 +1806,14 @@ form .button-area {
   }
   .about .row .content h3 {
     font-size: 1.7rem;
+  }
+  .skills .container .bar {
+    padding: 1.2rem 0.8rem;
+    min-height: 120px;
+  }
+  .skills .container .bar .info img {
+    width: 42px;
+    height: 42px;
   }
   .skills .container .bar .info span {
     font-size: 1.2rem;

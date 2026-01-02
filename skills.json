@@ -2,13 +2,7 @@
     {
         "name": "Java",
         "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-   
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-   
+    },   
    
     {
         "name": "HTML5",
@@ -57,9 +51,5 @@
     {
         "name": "GitHub",
         "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    },
-    {
-        "name": "Docker",
-        "icon": "https://w1.pngwing.com/pngs/984/270/png-transparent-fish-docker-software-deployment-bluemix-docker-inc-microservices-github-computer-software-thumbnail.png"
-    }   
+    }
 ]

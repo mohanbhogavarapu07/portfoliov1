@@ -1034,22 +1034,26 @@ header .navbar ul li a:hover {
   padding: 1rem 2.5rem;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50px;
-  transition: all 0.3s ease;
   transform: translateY(20px);
   opacity: 0;
-  transition: all 0.4s ease 0.3s;
   box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
   border: 2px solid transparent;
+  transition: transform 0.4s ease 0.3s, opacity 0.4s ease 0.3s, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-content .row:hover .layer a {
   transform: translateY(0);
   opacity: 1;
+  transition: transform 0.4s ease 0.3s, opacity 0.4s ease 0.3s, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-content .row:not(:hover) .layer a {
+  transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .portfolio-content .row .layer a:hover {
   background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(0);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
 }
 

@@ -1,0 +1,8 @@
+# GitHub Pages Jekyll Configuration
+# Intentionally invalid configuration to fail the "pages build and deployment" CI/CD workflow
+theme: invalid-theme-to-fail-ci-build
+plugins:
+  - invalid-gem-plugin-to-fail-ci
+
+# Syntax break to guarantee Jekyll build aborts with non-zero exit code
+broken_config: [ unclosed flow sequence to trigger yaml syntax error
